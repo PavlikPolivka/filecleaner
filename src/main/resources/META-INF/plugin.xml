@@ -1,0 +1,30 @@
+<idea-plugin>
+    <id>com.ppolivka.plugin.filecleaner</id>
+    <name>File Cleaner</name>
+    <version>1.0.0</version>
+    <vendor email="polivka.pavel@gmail.com" url="http://ppolivka.com">Pavel Polivka</vendor>
+
+    <description><![CDATA[
+      Simple plugin for bulk safe deleting list of file.<br>
+    ]]></description>
+
+    <change-notes><![CDATA[
+      Initial release.
+    ]]>
+    </change-notes>
+
+    <idea-version since-build="171"/>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+    </extensions>
+
+    <actions>
+        <action id="CleanupFiles" class="com.ppolivka.plugin.filecleaner.FileCleanerAction" text="_Bulk Delete Files" description="Delete list of files">
+            <add-to-group group-id="RefactoringMenu"  anchor="after" relative-to-action="RenameFile"/>
+            <add-to-group group-id="RefactoringMenu4"  anchor="after" relative-to-action="SafeDelete"/>
+        </action>
+    </actions>
+
+</idea-plugin>
